@@ -248,7 +248,7 @@
    title: 'Sehore Sharbati Royal Estate',
    desc: 'Alluvial black cotton soil grain. Rich natural wheat-germ oils produce phulkas that balloon effortlessly on high flame and stay soft all day.',
    img: 'https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?auto=format&fit=crop&w=800&q=85',
-   dishImg: 'https://images.unsplash.com/photo-1589367920969-ab8e050bbb04?auto=format&fit=crop&w=800&q=85',
+       dishImg: 'assets/images/bpr.jfif',
    tags: ['Warm Brioche', 'Toasted Hazelnut', 'Airy Crumb', 'Natural Sweetness'],
    pairing: 'Hand-churned cultured white butter, Lucknowi Dum Nihari & Dal Makhani.',
    hydration: '78% Water Binding'
@@ -256,8 +256,8 @@
   bhalia: {
    title: 'Bhalia Rain-Fed Coastal Amber',
    desc: 'GI-tagged non-irrigated coastal wheat. Extreme gluten elasticity for wafer-thin rotis that stretch and never tear.',
-   img: 'https://images.unsplash.com/photo-1506368249639-73a05d6f6488?auto=format&fit=crop&w=800&q=85',
-   dishImg: 'https://images.unsplash.com/photo-1586444248902-2f64eddc13df?auto=format&fit=crop&w=800&q=85',
+     img: 'assets/images/Bhalia.jfif',
+     dishImg: 'assets/images/bpr2.webp',
    tags: ['Wildflower Honey', 'Caramelized Grain', 'Extreme Elasticity', 'Silk Sheen'],
    pairing: 'Wafer-thin Rumali Roti, Kathiyawadi Sev Tameta, Puran Poli & Laccha Parathas.',
    hydration: '75% Water Binding'
@@ -265,7 +265,7 @@
   khapli: {
    title: 'Himalayan Ancient Khapli (Emmer)',
    desc: '10,000-year-old mountain heirloom. Fragile gluten matrix digests smoothly with sustained low-glycemic satiety.',
-   img: 'https://images.unsplash.com/photo-1603046891744-1f76eb10aec3?auto=format&fit=crop&w=800&q=85',
+     img: 'assets/images/flour3.jpg',
    dishImg: 'https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=800&q=85',
    tags: ['Toasted Barley', 'Earthy Hearth', 'Low-GI 42', 'Nutrient Dense'],
    pairing: 'Kumaoni Bhatt ki Churkani, Sarson Ka Saag & Cultured Butter.',
@@ -274,8 +274,8 @@
   bajra: {
    title: 'Barmer Desi Pearl Bajra & Jowar',
    desc: 'Stone-crushed mineral desert millet. Naturally gluten-free, dense in iron and magnesium with comforting winter warmth.',
-   img: 'https://images.unsplash.com/photo-1515543904379-3d757afe72e4?auto=format&fit=crop&w=800&q=85',
-   dishImg: 'https://images.unsplash.com/photo-1596040033229-a9821ebd058d?auto=format&fit=crop&w=800&q=85',
+     img: 'assets/images/Barmer.jfif',
+     dishImg: 'assets/images/BarmerRoti.jpg',
    tags: ['Campfire Earth', 'Roasted Sesame', 'Gluten Free', 'High Iron & Zinc'],
    pairing: 'Rajasthani Gatte ki Sabzi, Desi Gur (Jaggery) & Lasun Chutney.',
    hydration: '68% Water Binding'
@@ -442,6 +442,22 @@
     if (thermalEnzymeStatus) thermalEnzymeStatus.innerHTML = '<span style="color:#EF4444">✗ 0% Active (Enzymes Completely Denatured)</span>';
     if (thermalVitBStatus) thermalVitBStatus.innerHTML = '<span style="color:#EF4444">✗ Natural Germ Burned &amp; Stripped Out</span>';
    }
+  });
+ }
+
+ /* ==========================================================================
+    Back to Top Button (Excluded on Login, Signup & Dashboard Pages)
+    ========================================================================== */
+ const backToTopBtn = document.querySelector('[data-back-to-top]');
+ const isExcludedPage = document.querySelector('.auth-page, .dashboard-shell');
+ if (backToTopBtn && !isExcludedPage) {
+  const toggleBackToTop = () => {
+   backToTopBtn.classList.toggle('visible', window.scrollY > 300);
+  };
+  window.addEventListener('scroll', toggleBackToTop, { passive: true });
+  toggleBackToTop();
+  backToTopBtn.addEventListener('click', () => {
+   window.scrollTo({ top: 0, behavior: 'smooth' });
   });
  }
 })();
