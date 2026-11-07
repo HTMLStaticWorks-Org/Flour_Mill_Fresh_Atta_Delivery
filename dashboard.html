@@ -1,0 +1,204 @@
+<!doctype html><html lang="en" dir="ltr" data-theme="light"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Freshly milled flour, traditional grains and convenient atta delivery."><title>Customer Dashboard | Fresh Chakki</title><link rel="icon" type="image/png" href="assets/images/favicon.png"><link rel="apple-touch-icon" href="assets/images/favicon.png"><link rel="stylesheet" href="assets/css/style.css"></head><body>
+<header class="site-header"><div class="container header-main">
+<a class="brand" href="index.html" aria-label="Fresh Chakki home"><img class="brand-logo" src="assets/images/fresh-chakki-logo.png" alt="Fresh Chakki – Flour Mill and Fresh Atta Delivery"></a>
+<div class="header-actions"><button class="icon-btn" type="button" data-theme-toggle title="Change theme" aria-label="Switch theme">☾</button><button class="rtl-btn" type="button" data-rtl-toggle>RTL</button></div>
+</div></header>
+
+<main class="dashboard-shell">
+  <aside class="dash-side">
+    <h3>Customer Dashboard</h3>
+    <p style="font-size:.84rem;padding:0 12px;margin-bottom:0">Welcome to your pantry hub</p>
+    <nav class="dash-nav" aria-label="Dashboard sections">
+      <button type="button" class="active" data-dash-tab="overview">▦ &nbsp; Overview</button>
+      <button type="button" data-dash-tab="orders">▤ &nbsp; Orders &amp; Invoices</button>
+      <button type="button" data-dash-tab="account">⚙ &nbsp; Schedule &amp; Profile</button>
+      <a class="btn btn-secondary btn-small dash-logout-btn" href="login.html">Logout</a>
+    </nav>
+  </aside>
+
+  <section class="dash-main">
+    <!-- TAB 1: OVERVIEW -->
+    <div class="dash-panel active" id="overview">
+      <p class="eyebrow">Your account</p>
+      <h1 style="font-size:2.3rem">Good morning, Arjun!</h1>
+      <p>Here is a live summary of your fresh flour orders, active dispatch and pantry balance.</p>
+
+      <div class="grid grid-3">
+        <div class="card stat-card">
+          <p>Next delivery</p>
+          <div class="stat-value" style="font-size:1.35rem">Sat, 14 Nov</div>
+          <small>Morning Slot &bull; 7:30 AM</small>
+        </div>
+        <div class="card stat-card">
+          <p>Active plan</p>
+          <div class="stat-value" style="font-size:1.35rem">Family Bi-Weekly</div>
+          <small>10 kg &bull; MP Sharbati Medium</small>
+        </div>
+        <div class="card stat-card">
+          <p>Pantry credit</p>
+          <div class="stat-value" style="font-size:1.35rem">₹1,240</div>
+          <small>Auto-applied on next order</small>
+        </div>
+      </div>
+
+      <div class="card card-body" style="margin-top:22px">
+        <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:14px">
+          <div>
+            <span class="eyebrow" style="display:block;margin-bottom:4px">Live Dispatch</span>
+            <h3 style="margin:0">Order #FC-4108 &bull; MP Sharbati Wheat (5 kg, Medium Grind)</h3>
+            <p style="margin:4px 0 0;font-size:.88rem">Milled Today at 11:15 AM on Granite Chakki #02 (31.4°C)</p>
+          </div>
+          <span class="status">Out for Delivery</span>
+        </div>
+        <div class="notice">
+          <strong>Expected Arrival:</strong> Today between 5:30 PM – 6:30 PM &bull; Delivery Partner: Ramesh K. (<a href="tel:+919876543210" style="color:var(--brand);font-weight:700">+91 98765 43210</a>)
+        </div>
+      </div>
+
+      <div class="card card-body" style="margin-top:22px">
+        <h3>Quick actions</h3>
+        <div class="hero-actions" style="margin-top:12px">
+          <button type="button" class="btn btn-primary" data-dash-tab="orders">Place an Order</button>
+          <button type="button" class="btn btn-secondary" data-dash-tab="account">Manage Schedule &amp; Blend</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB 2: ORDERS & INVOICES -->
+    <div class="dash-panel" id="orders">
+      <p class="eyebrow">Order centre</p>
+      <h2>Orders &amp; Invoices</h2>
+      <p>Book a fresh cold-stone milling slot or review your past deliveries and GST receipts.</p>
+
+      <div class="order-layout">
+        <form class="card card-body" data-demo-form data-message="Order #FC-4119 confirmed! Scheduled for next cold-stone milling slot.">
+          <h3>Place a Fresh Order</h3>
+          <div class="field">
+            <label for="order-product">Choose product</label>
+            <select id="order-product">
+              <option>MP Sharbati Wheat (₹68/kg)</option>
+              <option>Khapli / Emmer Wheat (₹115/kg)</option>
+              <option>Jowar Flour (₹84/kg)</option>
+              <option>Bajra Flour (₹78/kg)</option>
+              <option>Multi-grain Blend (₹96/kg)</option>
+              <option>Gram Besan (₹110/kg)</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="order-grind">Grinding preference</label>
+              <select id="order-grind"><option>Medium</option><option>Fine</option><option>Coarse</option></select>
+            </div>
+            <div class="field">
+              <label for="order-qty">Quantity</label>
+              <select id="order-qty"><option>5 kg</option><option>2 kg</option><option>10 kg</option></select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="order-slot">Delivery preference</label>
+            <select id="order-slot"><option>Next available slot</option><option>Weekly plan</option><option>Bi-weekly plan</option><option>Monthly plan</option></select>
+          </div>
+          <div class="field">
+            <label for="order-addr">Delivery address</label>
+            <textarea id="order-addr" rows="2" placeholder="Plot 14, Indiranagar Stage II, Bengaluru – 560038"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Confirm Fresh Order</button>
+        </form>
+
+        <div class="card card-body">
+          <h3>Fresh Milling Summary</h3>
+          <p>Orders placed before 2:00 PM are slow-ground the same afternoon on natural granite stones below 38°C and dispatched in stitched kraft sacks.</p>
+          <ul class="checks">
+            <li>Zero pre-milled warehouse stock</li>
+            <li>Batch QR traceability stamped on every bag</li>
+            <li>100% whole wheat germ &amp; natural bran retained</li>
+          </ul>
+          <div class="notice"><strong>Free Doorstep Delivery</strong> on recurring plans and orders of 5 kg or above.</div>
+        </div>
+      </div>
+
+      <h3 style="margin-top:30px">Order History</h3>
+      <div class="card table-wrap">
+        <table class="data-table">
+          <thead><tr><th>Order ID</th><th>Product &amp; Grind</th><th>Date</th><th>Amount</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>#FC-4108</td><td>MP Sharbati Wheat &bull; 5 kg (Medium)</td><td>07 Nov 2026</td><td>₹340</td><td><span class="status">Out for Delivery</span></td></tr>
+            <tr><td>#FC-3984</td><td>Khapli Emmer Wheat &bull; 5 kg (Fine)</td><td>24 Oct 2026</td><td>₹575</td><td><span class="status">Delivered</span></td></tr>
+            <tr><td>#FC-3871</td><td>Multi-grain Blend &bull; 10 kg (Medium)</td><td>10 Oct 2026</td><td>₹960</td><td><span class="status">Delivered</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3 style="margin-top:28px">Invoices &amp; Billing</h3>
+      <div class="card table-wrap">
+        <table class="data-table">
+          <thead><tr><th>Invoice</th><th>Order</th><th>Date</th><th>Amount</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>INV-2026-118</td><td>#FC-4108</td><td>07 Nov 2026</td><td>₹340</td><td><span class="status">Paid</span></td></tr>
+            <tr><td>INV-2026-104</td><td>#FC-3984</td><td>24 Oct 2026</td><td>₹575</td><td><span class="status">Paid</span></td></tr>
+            <tr><td>INV-2026-089</td><td>#FC-3871</td><td>10 Oct 2026</td><td>₹960</td><td><span class="status">Paid</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TAB 3: SCHEDULE & PROFILE -->
+    <div class="dash-panel" id="account">
+      <p class="eyebrow">Preferences &amp; account</p>
+      <h2>Schedule &amp; Profile</h2>
+      <p>Customize your recurring milling schedule, household grain ratios and delivery address.</p>
+
+      <div class="grid grid-2" style="margin-bottom:22px">
+        <form class="card card-body" data-demo-form data-message="Your milling schedule preferences have been saved.">
+          <h3>Recurring Milling Schedule</h3>
+          <div class="field">
+            <label for="sched-grain">Preferred grain</label>
+            <select id="sched-grain"><option>MP Sharbati Wheat</option><option>Khapli Wheat</option><option>Jowar</option><option>Bajra</option></select>
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="sched-tex">Grinding texture</label>
+              <select id="sched-tex"><option>Medium</option><option>Fine</option><option>Coarse</option></select>
+            </div>
+            <div class="field">
+              <label for="sched-freq">Frequency</label>
+              <select id="sched-freq"><option>Bi-weekly</option><option>Weekly</option><option>Monthly</option><option>One-time</option></select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="sched-day">Preferred delivery day</label>
+            <select id="sched-day"><option>Saturday</option><option>Monday</option><option>Wednesday</option><option>Friday</option></select>
+          </div>
+          <button type="submit" class="btn btn-primary">Save Schedule</button>
+        </form>
+
+        <form class="card card-body" data-demo-form data-message="Your custom grain blend ratio has been saved.">
+          <h3>Custom Blend Ratio (%)</h3>
+          <p style="font-size:.88rem">Set ingredient percentages for your household multi-grain blend.</p>
+          <div class="form-row">
+            <div class="field"><label for="blend-wheat">Sharbati Wheat %</label><input id="blend-wheat" type="number" min="0" max="100" value="60"></div>
+            <div class="field"><label for="blend-ragi">Ragi Millet %</label><input id="blend-ragi" type="number" min="0" max="100" value="20"></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="blend-oats">Rolled Oats %</label><input id="blend-oats" type="number" min="0" max="100" value="10"></div>
+            <div class="field"><label for="blend-chana">Roasted Chana %</label><input id="blend-chana" type="number" min="0" max="100" value="10"></div>
+          </div>
+          <button type="submit" class="btn btn-primary">Save Blend Ratio</button>
+        </form>
+      </div>
+
+      <form class="card card-body" data-demo-form data-message="Profile and delivery address updated.">
+        <h3>Account &amp; Delivery Details</h3>
+        <div class="form-row">
+          <div class="field"><label for="acc-name">Full name</label><input id="acc-name" value="Arjun Mehta" placeholder="e.g. Arjun Mehta"></div>
+          <div class="field"><label for="acc-phone">Phone number</label><input id="acc-phone" type="tel" value="+91 98765 43210" placeholder="+91 98765 43210"></div>
+        </div>
+        <div class="field"><label for="acc-email">Email address</label><input id="acc-email" type="email" value="arjun.mehta@gmail.com" placeholder="arjun.mehta@gmail.com"></div>
+        <div class="field"><label for="acc-addr">Saved doorstep address</label><textarea id="acc-addr" rows="2" placeholder="House number, street, locality, Bengaluru – 560038">Plot 14, 12th Main, Indiranagar Stage II, Bengaluru – 560038</textarea></div>
+        <button type="submit" class="btn btn-primary">Save Profile Changes</button>
+      </form>
+    </div>
+  </section>
+</main>
+<div class="toast" role="status" aria-live="polite"></div>
+<script src="assets/js/main.js"></script></body></html>
