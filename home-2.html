@@ -34,9 +34,7 @@
       </div>
     </div>
     <div class="header-actions mobile-actions">
-      <button class="icon-btn" data-theme-toggle aria-label="Switch theme">☾</button>
-      <button class="rtl-btn" data-rtl-toggle>RTL</button>
-      <button class="menu-btn" data-menu-toggle aria-label="Open navigation" aria-expanded="false">☰</button>
+      <button class="menu-btn" type="button" data-menu-toggle aria-label="Open navigation" aria-expanded="false">☰</button>
     </div>
   </div>
   <div class="container mobile-nav">
@@ -46,8 +44,16 @@
     <a href="products.html">Products</a>
     <a href="process.html">Process</a>
     <a href="contact.html">Contact</a>
-    <a href="login.html">Login</a>
-    <a href="dashboard.html">Dashboard</a>
+    <div class="mobile-nav-actions">
+      <div class="mobile-nav-toggles">
+        <button class="icon-btn" type="button" data-theme-toggle title="Change theme" aria-label="Switch theme">☾</button>
+        <button class="rtl-btn" type="button" data-rtl-toggle>RTL</button>
+      </div>
+      <div class="mobile-nav-cta">
+        <a class="btn btn-secondary btn-small" href="login.html">Login</a>
+        <a class="btn btn-primary btn-small" href="dashboard.html">Dashboard</a>
+      </div>
+    </div>
   </div>
 </header>
 
@@ -114,7 +120,7 @@
 
           <div class="hero-actions">
             <a class="btn btn-primary" href="#monogram-studio">Design Monogram Bag</a>
-            <a class="btn btn-secondary" href="#sommelier-flight" style="color:#FFF;border-color:rgba(217,119,6,0.6);">Explore Terroirs</a>
+            <a class="btn btn-secondary" href="#sommelier-flight">Explore Terroirs</a>
           </div>
         </div>
       </div>
